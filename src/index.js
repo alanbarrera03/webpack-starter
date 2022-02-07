@@ -1,5 +1,17 @@
-import { saludar } from './js/componentes.js';
 import './styles.css';
 
-const nombre = 'Alan';
-saludar( nombre );
+
+import { Todo, TodoList } from './classes';
+import { crearTodoHtml } from './js/componentes';
+
+export const todoList = new TodoList();
+
+todoList.todos.forEach( crearTodoHtml );
+
+const newTodo = new Todo( 'Aprender Javascrip' );
+
+console.log( 'todos', todoList.todos);
+
+// crearTodoHtml( tarea );
+
+
